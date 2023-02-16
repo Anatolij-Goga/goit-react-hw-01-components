@@ -5,6 +5,7 @@ import { Statistics } from './Statistics';
 import data from '../configs/data';
 
 import { FriendList } from './FriendList';
+import friends from '../configs/friends';
 
 export const App = () => {
   return (
@@ -17,7 +18,7 @@ export const App = () => {
         stats={user.stats}
       />
       <Statistics title="Upload stats" stats={data} />
-      <FriendList />
+      <FriendList friends={friends} />
     </>
   );
 };
