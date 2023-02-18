@@ -1,3 +1,5 @@
+import { Container } from './Container';
+
 import { Profile } from './Profile';
 import user from '../configs/user';
 
@@ -7,9 +9,17 @@ import data from '../configs/data';
 import { FriendList } from './FriendList';
 import friends from '../configs/friends';
 
+import { TransactionHistory } from './TransactionHistory';
+import transactions from '../configs/transactions';
+
+console.log(user);
+console.log(data);
+console.log(friends);
+console.log(transactions);
+
 export const App = () => {
   return (
-    <>
+    <Container>
       <Profile
         username={user.username}
         tag={user.tag}
@@ -19,6 +29,7 @@ export const App = () => {
       />
       <Statistics title="Upload stats" stats={data} />
       <FriendList friends={friends} />
-    </>
+      <TransactionHistory items={transactions} />;
+    </Container>
   );
 };
